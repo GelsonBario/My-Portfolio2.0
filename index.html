@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio - Gelson Bario</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">Gelson Bario</h1>
+            <nav>
+                <button id="menu-toggle">☰</button>
+                <ul id="menu-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h2>Olá, eu sou Gelson</h2>
+
+            <p>Eu sou <span id="typed-text"></span></p>
+            <a href="#projetos" class="btn">Meus Projetos</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="container">
+        <h2>Sobre Mim</h2>
+
+        <div class="sobre-container"></div>
+
+            <div class="sobre-texto">
+                <p>
+                    Me chamo Gelson, tenho 22 anos, sou do Paraná do município de Nova Laranjeiras . Estou aprendendo a programar a pouco tempo, mas já estou me familiarizando com as tecnologias
+                    usados. A minha formação é de Técnico em Administração, e estou cursando no momento Bacharel em Administração, e também estou fazendo o curso de Ánalise e Desenvolveimento de 
+                    Sistemas. E como eu comecei a gostar de programação, sinceramente não sei, nem lembro quando foi a primeira vez que comecei a ver algo sobre  programação.
+                    Mas agora sei como funciona para criar os sites e espero evoluir os meus conhecimentos e vou conseguir.
+                </p>
+            </div>
+
+        </div>
+        <h3>Minhas Ferramentas</h3>
+        <div class="tecnologias-grid">
+            <div class="tech-icon">
+                <i class="devicon-html5-plain-wordmark"></i>
+                <span>HTML5</span>
+            </div>
+            <div class="tech-icon">
+                <i class="devicon-css3-plain-wordmark"></i>
+                <span>CSS3</span>
+            </div>
+            <div class="tech-icon">
+                <i class="devicon-javascript-plain"></i>
+                <span>JavaScript</span>
+            </div>
+            <div class="tech-icon">
+                <i class="devicon-react-original-wordmark"></i>
+                <span>React</span>
+            </div>
+            <div class="tech-icon">
+                <i class="devicon-git-plain"></i>
+                <span>Git</span>
+            </div>
+            <div class="tech-icon">
+                <i class="devicon-nodejs-plain-wordmark"></i>
+                <span>Node.js</span>
+            </div>
+
+    </section>
+
+    <section id="projetos" class="container">
+        <h2>Meus Projetos</h2>
+        <div class="projetos-grid">
+
+            <div class="projeto-card">
+                <h3>Create-password-end-QRCode</h3>
+                <p>Breve descrição do que este projeto faz e as tecnologias usadas.</p>
+
+                <div class="projeto-tecnologias">
+                    <i class="devicon-html5-plain" title="HTML5"></i>
+                    <i class="devicon-css3-plain" title="CSS3"></i>
+                    <i class="devicon-javascript-plain" title="JavaScript"></i>
+                </div>
+                <a href="https://github.com/GelsonBario/Create-password-end-QRCode" class="btn-secundario">Ver Código</a>
+            </div>
+
+            <div class="projeto-card">
+                <h3>Projeto Incrível 2</h3>
+                <p>Breve descrição do que este projeto faz e as tecnologias usadas.</p>
+
+                <div class="projeto-tecnologias">
+                    <i class="devicon-react-original" title="React"></i>
+                    <i class="devicon-nodejs-plain" title="Node.js"></i>
+                    <i class="devicon-express-original" title="Express"></i>
+                </div>
+                <a href="#" class="btn-secundario">Ver Código</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contato" class="container">
+        <h2>Entre em Contato</h2>
+        <p>Gostaria de conversar? Me mande um e-mail ou me encontre nas redes sociais!</p>
+        <ul class="contato-links">
+            <li>Email: <a href="mailto:gelsonbario@gmail.com">gelsonbario@gmail.com</a></li>
+            <li>LinkedIn: <a href="#">Seu LinkedIn</a></li>
+            <li>GitHub: <a href="#">Seu GitHub</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 GELSON BARIO. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="./src/script.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,350 @@
+/* --- Variáveis de Cor e Configurações Globais --- */
+:root {
+    --cor-primaria: #0a2342; /* Azul escuro */
+    --cor-secundaria: #007bff; /* Azul vibrante */
+    --cor-fundo: #f4f7f6; /* Fundo claro */
+    --cor-texto: #333;
+    --cor-branca: #ffffff;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Habilita a rolagem suave ao clicar nos links da nav */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Cabeçalho e Navegação --- */
+header {
+    background: var(--cor-branca);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+}
+
+header .logo {
+    color: var(--cor-primaria);
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav li {
+    margin-left: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--cor-primaria);
+    font-weight: 500;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* Botão do menu mobile - escondido por padrão */
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--cor-primaria);
+}
+
+/* --- Seções --- */
+section {
+    padding: 60px 0;
+}
+
+/* Hero (Início) */
+.hero {
+    background: var(--cor-primaria);
+    color: var(--cor-branca);
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background: var(--cor-secundaria);
+    color: var(--cor-branca);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3; /* Tom mais escuro */
+}
+
+.btn-secundario {
+    display: inline-block;
+    background: var(--cor-fundo);
+    color: var(--cor-secundaria);
+    border: 1px solid var(--cor-secundaria);
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-secundario:hover {
+    background: var(--cor-secundaria);
+    color: var(--cor-branca);
+}
+
+/* Seção Sobre */
+#sobre {
+    background: var(--cor-branca);
+}
+
+/* Seção Projetos */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.projeto-card {
+    background: var(--cor-branca);
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Seção Contato */
+.contato-links {
+    list-style: none;
+    margin-top: 20px;
+}
+.contato-links li {
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    background: var(--cor-primaria);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* --- Responsividade (Media Query) --- */
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+    }
+
+    #menu-toggle {
+        display: block; /* Mostra o botão hambúrguer */
+    }
+
+    header nav ul {
+        /* Esconde o menu por padrão no mobile */
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* Classe .show será adicionada/removida via JavaScript */
+    header nav ul.show {
+        display: flex;
+    }
+
+    header nav li {
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
+
+/* --- Estilos para os Ícones de Tecnologia (Novo) --- */
+
+#sobre h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--cor-primaria);
+    text-align: center;
+}
+
+.tecnologias-grid {
+    display: grid;
+    /* Cria colunas de tamanho flexível, com no mínimo 80px */
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 25px; /* Espaçamento entre os ícones */
+    justify-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.tech-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tech-icon i {
+    font-size: 3.5rem; /* Tamanho do ícone */
+    color: var(--cor-texto);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tech-icon span {
+    font-size: 0.9rem;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+/* Efeito de "hover" para os ícones */
+.tech-icon:hover i {
+    transform: scale(1.1); /* Aumenta o ícone levemente */
+    color: var(--cor-secundaria); /* Muda a cor para o azul vibrante */
+}
+
+/* --- Estilos para Ícones nos Cards de Projeto (Novo) --- */
+
+.projeto-tecnologias {
+    display: flex; /* Coloca os ícones em linha */
+    flex-wrap: wrap; /* Permite que quebrem a linha se não couberem */
+    gap: 10px; /* Espaçamento entre os ícones */
+    
+    /* Espaçamento para separar da descrição e dos botões */
+    margin: 15px 0; 
+}
+
+.projeto-tecnologias i {
+    font-size: 2rem; /* Tamanho do ícone (menor que o da seção 'Sobre') */
+    color: var(--cor-texto);
+    transition: color 0.3s ease;
+}
+
+.projeto-tecnologias i:hover {
+    color: var(--cor-secundaria); /* Muda a cor ao passar o mouse */
+}
+
+/* --- Estilo para o Efeito de Digitação (Novo) --- */
+
+/* Ajusta o parágrafo da seção hero */
+.hero p {
+    font-size: 1.25rem;
+    /* Define uma altura mínima para o parágrafo para 
+       evitar que o layout "pule" enquanto o texto é digitado */
+    min-height: 2em; /* (1.25rem * 1.6 line-height) ~= 2em */
+}
+
+/* Estiliza o cursor piscante (adicionado pela Typed.js) */
+.typed-cursor {
+    color: var(--cor-branca);
+}
+
+/* --- Estilos para Seção Sobre com Foto (Novo) --- */
+
+/* Garante que o H2 "Sobre Mim" fique centralizado */
+#sobre h2 {
+    text-align: center;
+    margin-bottom: 30px; /* Adiciona espaço antes do conteúdo */
+}
+
+.sobre-container {
+    display: flex;
+    align-items: center; /* Alinha verticalmente a foto e o texto */
+    gap: 40px; /* Espaço entre a foto e o texto */
+    margin-bottom: 40px; /* Espaço antes da seção "Minhas Ferramentas" */
+}
+
+.sobre-imagem {
+    flex-basis: 300px; /* Define um tamanho base para a coluna da imagem */
+    flex-shrink: 0; /* Impede que a imagem encolha */
+    text-align: center;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    max-width: 300px; /* Tamanho máximo da imagem */
+    height: auto;
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    border: 5px solid var(--cor-branca); /* Borda branca sutil */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+.sobre-texto {
+    flex: 1; /* Faz o texto ocupar o espaço restante */
+}
+
+.sobre-texto p {
+    margin-bottom: 15px; /* Espaçamento entre os parágrafos */
+}
+
+/* --- Ajuste de Responsividade para a Seção Sobre --- */
+
+/* A media query @media (max-width: 768px) já existe no seu CSS.
+   Adicione este código DENTRO dela, junto com os outros estilos. */
+
+@media (max-width: 768px) {
+    /* ... (seus outros estilos de 768px, como o do menu) ... */
+
+    /* Novo código para a seção Sobre */
+    .sobre-container {
+        flex-direction: column; /* Empilha a imagem e o texto */
+        text-align: center; /* Centraliza o texto no mobile */
+        gap: 20px;
+    }
+
+    .sobre-imagem {
+        max-width: 250px; /* Limita o tamanho da foto no mobile */
+        margin: 0 auto; /* Centraliza a imagem */
+    }
+}
